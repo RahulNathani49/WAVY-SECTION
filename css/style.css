@@ -1,0 +1,88 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+*{
+    box-sizing: border-box;
+}
+.home-page{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-image: -webkit-linear-gradient(bottom left, rgba(), rgba()),url(../images/bg.jpg);
+    background-image: -o-linear-gradient(bottom left, rgba(), rgba()),url(../images/bg.jpg);
+    background-image: linear-gradient(to top right, rgba(170,7,107,.5), rgba(97,4,95,.5)),url(../images/bg.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.home-page .wave{
+    position: absolute;
+    height: 143px;
+    width: 100%;
+    background-image: url(../images/wave.png);
+    bottom: 0;
+    animation: animate 10s linear infinite;
+}
+@keyframes animate{
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 1360px;
+    }
+}
+.home-page::before{
+    content:'';
+    position: absolute;
+    height: 143px;
+    width: 100%;
+    background-image: url(../images/wave.png);
+    bottom: 0;
+    animation: animate-reverse 10s linear infinite;
+    opacity: .7;
+}
+@keyframes animate-reverse{
+    0%{
+        background-position: 1360px;
+    }
+    100%{
+        background-position: 0%;
+    }
+}
+.home-page::after{
+    content:'';
+    position: absolute;
+    height: 143px;
+    width: 100%;
+    background-image: url(../images/wave.png);
+    bottom: 0;
+    animation: animated 10s linear infinite;
+    opacity: .4;
+    animation-delay: 1s;
+}
+h1{
+    margin: 0;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    font-size: 60px;
+    font-family: sans-serif;
+}
+p{
+    padding:20px 100px;
+    color: white;
+    font-size: 20px;
+    line-height: 1.4;
+    font-family: cursive;
+}
+@keyframes animated{
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 1360px;
+    }
+}
